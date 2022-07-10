@@ -29,13 +29,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug {
-
+            applicationIdSuffix ".dev"
         }
         appQA{
-
+            applicationIdSuffix ".qa"
         }
         appUAT{
-            
+            applicationIdSuffix ".uat"
         }
     }
     compileOptions {
@@ -69,5 +69,6 @@ dependencies {
 
 secureExtension {
     buildTypesName = ['debug','release','appQA','appUAT']
-    buildTypeKeys = ['debug','release','appQA','appUAT']
+    buildTypeKeys = ['DEBUG','RELEASE','APPQA','APPUAT']
+    buildTypesSuffix = ['dev', '', 'qa', 'UAT']
 }
